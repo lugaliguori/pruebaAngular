@@ -4,7 +4,8 @@
     [leafletLayer]="baseLayer"
     [leafletFitBounds]="mapFitBounds"
     (leafletMapReady)="onMapReady($event)"
+    (leafletClick)="clickedElement($event)"
     >
 ></div>
 
-<app-tool-bar></app-tool-bar>
+<app-tool-bar ></app-tool-bar>

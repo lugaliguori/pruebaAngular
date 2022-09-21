@@ -10,3 +10,8 @@
     font-size: .875rem;
     z-index: 1001;
 }
+
+.icons{
+    height: 25px;
+    width: 25px;
+}

@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h5>Análisis Gráfico</h5>
+    <hr/>
+    <form class="mt-2" *ngIf="selectForm" [formGroup]="selectForm">
+        <select class="form-select" aria-label="Default select example" formControlName="select" (ngModelChange)="updateChart()">
+            <option hidden>Selecciona un atributo</option>
+            <option value="Tipo Soporte">Tipo Soporte</option>
+            <option value="Tipo Luminaria">Tipo Luminaria</option>
+            <option value="Tipo Lampara">Tipo Lampara</option>
+        </select>
+    </form>
+
+    <div class="mt-5" *ngIf="data">
+        <highcharts-chart 
+            [Highcharts]="Highcharts"
+
+            [constructorType]="chartConstructor"
+            [options]="chartOptions"
+            [(update)]="update"
+            style="width: 100%; height: 400px; display: block;"
+        ></highcharts-chart>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { circleMarker, geoJSON, GeoJSONOptions, LatLng, LatLngBounds, Layer, Map, MapOptions, tileLayer, TileLayer } from 'leaflet';
+import { luminaria } from './model/luminaria';
+import { MarkerInformationService } from './services/marker-information.service';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +26,7 @@ export class AppComponent
     [37.70590845000001, -3.98959274]
   ]);
 
-  public constructor()
+  public constructor(private service: MarkerInformationService)
   {
     
     this.baseLayer = tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -46,7 +48,6 @@ export class AppComponent
   private async addLuminairesLayer():Promise<void>
   {
     const luminaires = await (await fetch('assets/data/luminarias.geojson')).json();
-
     const options:GeoJSONOptions = {
       pointToLayer: (feature:GeoJSON.Feature, latLng:LatLng) => circleMarker(latLng),
       style: feature =>  ({
@@ -56,9 +57,33 @@ export class AppComponent
         weight: 1,
         opacity: 1,
         fillOpacity: 1
-      }) 
+      }),
+      onEachFeature: this.onEachFeature.bind(this)
     };
-
     geoJSON(luminaires, options).addTo(this.map);
   }
+
+  public clickedElement(event: any){
+    this.map.flyTo(event.latlng,18)
+  }
+
+  public setData(marker: luminaria){
+    this.service.setLuminaria(marker)
+  }
+
+  public onEachFeature(feature: GeoJSON.Feature, layer: Layer) {
+    layer.on('click', e => {
+      e.target.setStyle({
+        color: 'blue',
+        fillColor: 'blue'
+      })
+      let marker  = new luminaria(feature)
+
+      this.setData(marker);
+    })
+    
+  }
+
+
+
 }

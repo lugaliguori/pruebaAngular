@@ -1,1 +1,17 @@
-<div class="container"></div>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/analisis-grafico"  >
+                <img class="icons" src="assets/icons/chart.svg" alt="info" />
+          </a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link " routerLinkActive="active" routerLink="/informacion-elemento">
+                <img class="icons" src="assets/icons/info.svg" alt="info" />
+          </a>
+        </li>
+    </ul>
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+</div>

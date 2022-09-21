@@ -1,0 +1,15 @@
+.input{
+    border-bottom: grey 1px solid;
+    padding-bottom: 1rem;
+    padding-right: 3px;
+}
+
+.informationForm{
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.col-sm-9{
+    align-self: center;
+}

@@ -1,0 +1,273 @@
+<div class="container mt-4">
+    <h5>Información del Elemento</h5>
+    <hr/>
+    <form *ngIf="data" class="mb-5 informationForm animate__animated animate__backInRight">
+        <div class="row mb-3 input">
+            <label for="observations" class="col-sm-3 col-form-label">Obervaciones</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="observations" [value]="data.observaciones" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="lumnarie_id" class="col-sm-3 col-form-label">Id Luminaria</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="lumnarie_id"  [value]="data.id_luminaria" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="punto_luz" class="col-sm-3 col-form-label">Punto Luz</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="punto_luz" [value]="data.punto_luz" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="vial" class="col-sm-3 col-form-label">Vial</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="vial" [value]="data.vial" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="numero" class="col-sm-3 col-form-label">Número</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="numero" [value]="data.numero" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="lado_via" class="col-sm-3 col-form-label">Lado Via</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="lado_via" [value]="data.lado_via" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="distancia_eje" class="col-sm-3 col-form-label">Distancia Eje</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="distancia_eje" [value]="data.distancia_eje" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="s1" class="col-sm-3 col-form-label">S1</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="s1" [value]="data.s1" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="s2" class="col-sm-3 col-form-label">S2</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="s2" [value]="data.s2" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="centro_mando" class="col-sm-3 col-form-label">Centro de mando</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="centro_mando" [value]="data.centro_mando" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="Operativa" class="col-sm-3 col-form-label">Operativa</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="Operativa" [value]="data.operativa" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="altura" class="col-sm-3 col-form-label">Altura</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="altura" [value]="data.altura" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="tipo_soporte" class="col-sm-3 col-form-label">Tipo soporte</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="tipo_soporte" [value]="data.tipo_soporte" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="marca_soporte" class="col-sm-3 col-form-label">Marca soporte</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="marca_soporte" [value]="data.marca_soporte" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="modelo_soporte" class="col-sm-3 col-form-label">Modelo soporte</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="modelo_soporte" [value]="data.modelo_soporte" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="estado_soporte" class="col-sm-3 col-form-label">Estado soporte</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="estado_soporte" [value]="data.estado_soporte" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="situacion_soporte" class="col-sm-3 col-form-label">Situación soporte</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="situacion_soporte" [value]="data.situacion_soporte" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="tamano_brazo" class="col-sm-3 col-form-label">Tamaño brazo</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="tamano_brazo" [value]="data.tamano_brazo" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="longitud_brazo" class="col-sm-3 col-form-label">Longitud Brazo</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="longitud_brazo" [value]="data.longitud_brazo" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="longitud_brazo" class="col-sm-3 col-form-label">Orientación Brazo</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="longitud_brazo" [value]="data.orientacion_brazo" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="tipo_luminaria" class="col-sm-3 col-form-label">Tipo luminaria</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="tipo_luminaria" [value]="data.tipo_luminaria" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="marca_luminaria" class="col-sm-3 col-form-label">Marca luminaria</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="marca_luminaria" [value]="data.marca_luminaria" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="modelo_luminaria" class="col-sm-3 col-form-label">Modelo luminaria</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="modelo_luminaria" [value]="data.modelo_luminaria" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="tipo_lampara" class="col-sm-3 col-form-label">Tipo lampara</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="tipo_lampara" [value]="data.tipo_lampara" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="marca_lampara" class="col-sm-3 col-form-label">Marca lampara</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="marca_lampara" [value]="data.marca_lampara" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="modelo_lampara" class="col-sm-3 col-form-label">Modelo lampara</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="modelo_lampara" [value]="data.modelo_lampara" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="estado_lampara" class="col-sm-3 col-form-label">Estado lampara</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="estado_lampara" [value]="data.estado_lampara" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="cantidad_lamparas" class="col-sm-3 col-form-label">Cantidad lamparas</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="cantidad_lamparas" [value]="data.cantidad_lamparas" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="potencia" class="col-sm-3 col-form-label">Potencia</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="potencia" [value]="data.potencia" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="equipo_auxiliar" class="col-sm-3 col-form-label">Equipo auxiliar</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="equipo_auxiliar" [value]="data.equipo_auxiliar" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="situacion_equipo_auxiliar" class="col-sm-3 col-form-label">Sitación equipo auxiliar</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="situacion_equipo_auxiliar" [value]="data.situacion_equipo_auxiliar" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="orientacion" class="col-sm-3 col-form-label">Orientación</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="orientacion" [value]="data.orientacion" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="alta" class="col-sm-3 col-form-label">Alta</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="alta" [value]="data.alta" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="usuario_alta" class="col-sm-3 col-form-label">Usuario alta</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="usuario_alta" [value]="data.usuario_alta" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="fecha_alta" class="col-sm-3 col-form-label">Fecha alta</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="fecha_alta" [value]="data.fecha_alta"disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="modificado" class="col-sm-3 col-form-label">Modificado</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="modificado" [value]="data.modificado" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="usuario_modificado" class="col-sm-3 col-form-label">Usuario modificado</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="usuario_modificado" [value]="data.usuario_modificado" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="fecha_modificado" class="col-sm-3 col-form-label">Fecha modificado</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="fecha_modificado" [value]="data.fecha_modificado" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="herramienta" class="col-sm-3 col-form-label">Herramienta</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="herramienta" [value]="data.herramienta" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="numero_registro" class="col-sm-3 col-form-label">Numero registro</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="numero_registro" [value]="data.numero_registro" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="envio" class="col-sm-3 col-form-label">Envío</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="envio" [value]="data.envio" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="fecha_envio" class="col-sm-3 col-form-label">Fecha envío</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="fecha_envio" [value]="data.fecha_envio" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="id_centro_mando" class="col-sm-3 col-form-label">Centro de mando id</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="id_centro_mando" [value]="data.id_centro_mando" disabled>
+            </div>
+        </div>
+        <div class="row mb-3 input">
+            <label for="id_circuito" class="col-sm-3 col-form-label">Circuito Id</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="id_circuito" [value]="data.id_circuito" disabled>
+            </div>
+        </div>
+    </form>
+    <div *ngIf="!data">
+        <h3>Selecciona un elemento del mapa</h3>
+     </div>
+</div>
