@@ -21,7 +21,7 @@ export class GraphDetailComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.selectForm = formBuilder.group({
-      select: ['Tipo Soporte',[Validators.required]]
+      select: ['tipo_soporte',[Validators.required]]
     })
    }
 
@@ -35,10 +35,10 @@ export class GraphDetailComponent implements OnInit {
 
   async loadData(){
     this.data = await (await fetch('assets/data/luminarias.geojson')).json();
-    console.log(this.data);
+    let count  = await this.updateData(this.data, this.selectForm.value.select);
     this.chartOptions = {
       series: [{
-        data: [1, 2, 3],
+        data: count,
         type: 'pie'
       }],
       title: {
@@ -51,11 +51,30 @@ export class GraphDetailComponent implements OnInit {
   }
 
   async updateChart(){
-    this.chartOptions.title = {
-     text: this.selectForm.value.select
+    let count = await this.updateData(this.data, this.selectForm.value.select);
+    this.chartOptions = {
+      title: {
+        text: this.selectForm.value.select
+      },
+      series: [{
+        data: count,
+        type: 'pie'
+      }]
     }
     this.update = true;
   }
 
-  
+  async updateData(data: any, value: string){
+    let count: any = {};
+    let finalData = [];
+    data.features.forEach( (element: any) => {
+      count[element.properties[value.toString()]] = (count[element.properties[value.toString()]] || 0) +1
+      })
+    for (let key in count){
+      finalData.push({name: key, y: count[key]})
+    }
+    return finalData;
+    }
+
+
 }
