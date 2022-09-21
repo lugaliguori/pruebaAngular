@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MarkerInformationService } from '../services/marker-information.service';
 import { luminaria } from '../model/luminaria';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-information-detail',
@@ -13,6 +14,8 @@ export class InformationDetailComponent implements OnInit {
 
   public data: luminaria | undefined;
 
+  private subscription: any;
+
   constructor(private marker: MarkerInformationService) { }
 
   ngOnInit(): void {
@@ -22,9 +25,14 @@ export class InformationDetailComponent implements OnInit {
   }
 
   async getData(){
-    this.marker.luminaria.subscribe((lum) =>{
+    this.subscription = this.marker.luminaria.subscribe((lum) =>{
       this.data = lum;
     }) 
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+    
   }
 
 }

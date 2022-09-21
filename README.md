@@ -1,3 +1,22 @@
+# Prueba Tecnica Realizada por Luis Liguori
+
+Dado una plantilla con un mapa de leaflet se realizo un sidebar con dos funcionalidades:
+
+- Informacion de elemento:
+
+Muestra la informacion del elemento seleccionado en el mapa
+
+- Grafico
+
+Muestra informacion en un grafico de torta en base a un elemento seleccionado
+
+techStack:
+
+- Angular Cli: 13.3.8
+- Node: 14.15.3
+- Npm: 6.14.9
+
+
 # TestAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
